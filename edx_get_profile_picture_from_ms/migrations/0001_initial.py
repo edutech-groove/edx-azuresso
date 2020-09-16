@@ -18,7 +18,6 @@ def _get_or_create_site():
         return site_lms[0].id
 
 def create_provider_record(apps, schema_editor):
-    domain_id = Site.objects.get(pk=4)
     OAuth2ProviderConfig = apps.get_model("third_party_auth", "OAuth2ProviderConfig")
     OAuth2ProviderConfig.objects.create(
         name="Microsoft",
