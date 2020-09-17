@@ -6,5 +6,4 @@
 
 ## Note
 
-- We must to define `AZURE_CLIENT_ID` and `AZURE_SECRET_KEY` values, that was included in `grvlms-cli`
-- We also set `ACTIVATE_AZURE` variable is `true` to active Azure API.
+- We must to set `AZURE_CLIENT_ID` and `AZURE_SECRET_KEY` values in your django settings.
