@@ -1,5 +1,5 @@
 """
-Setup file for azure_picture_profile Django plugin.
+Setup file for Azuresso Django plugin.
 """
 
 from __future__ import print_function
@@ -56,23 +56,23 @@ def get_version(*file_paths):
     raise RuntimeError('Unable to find version string.')
 
 
-VERSION = get_version('azure_picture_profile', '__init__.py')
+VERSION = get_version('azuresso', '__init__.py')
 
 setup(
-    name='azure_picture_profile',
+    name='azuresso',
     version=VERSION,
-    description='azure_picture_profile',
+    description='azuresso',
     author='eduNEXT',
     author_email='contact@edunext.co',
     packages=[
-        'azure_picture_profile',
+        'azuresso',
     ],
     include_package_data=True,
     install_requires=load_requirements('requirements/base.in'),
     zip_safe=False,
     entry_points={
         "lms.djangoapp": [
-            'azure_picture_profile = azure_picture_profile.apps:EdxAzureSSOConfig',
+            'azuresso = azuresso.apps:EdxAzureSSOConfig',
         ],
     },
 )
