@@ -5,7 +5,6 @@ from django.conf import settings
 from django.contrib.sites.models import Site
 import logging
 
-SECRET_KEY=settings.SOCIAL_AUTH_OAUTH_SECRETS.get("azuread-oauth2", "")
 AZURE_CLIENT_ID=settings.AZURE_CLIENT_ID
 LMS_HOST = settings.ENV_TOKENS.get("LMS_BASE")
 
@@ -27,7 +26,6 @@ def create_provider_record(apps, schema_editor):
         backend_name="azuread-oauth2",
         site_id=_get_or_create_site(),
         key=AZURE_CLIENT_ID,
-        secret=SECRET_KEY,
     )
     logging.info("Created Provider Configuration (OAuth) for Microsoft")
 
