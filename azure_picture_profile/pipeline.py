@@ -10,7 +10,8 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
 log = logging.getLogger(__name__)
 
 def download_profile_image(user=None, *args, **kwargs):
-    if user and not user.profile.profile_image_uploaded_at:
+    is_azuread_oauth2 = kwargs['backend'] and kwargs['backend'].name == "azuread-oauth2" and True or False
+    if user and not user.profile.profile_image_uploaded_at and is_azuread_oauth2:
         try:
             username = user.username
 
