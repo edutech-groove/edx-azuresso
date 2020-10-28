@@ -10,10 +10,10 @@ from django.conf import settings
 
 class EdxAzureSSOConfig(AppConfig):
     """
-    azure_picture_profile configuration.
+    azuresso configuration.
     """
-    name = 'azure_picture_profile'
-    verbose_name = 'azure_picture_profile'
+    name = 'azuresso'
+    verbose_name = 'azuresso'
 
     plugin_app = {
         'settings_config': {
@@ -31,6 +31,6 @@ class EdxAzureSSOConfig(AppConfig):
         if settings.FEATURES.get('ENABLE_AZURE_PICTURE_PROFILE', False):
             if settings.FEATURES.get('ENABLE_THIRD_PARTY_AUTH', False):
                 settings.SOCIAL_AUTH_PIPELINE += [
-                    'azure_picture_profile.pipeline.download_profile_image',
+                    'azuresso.picture_profile.pipeline.download_profile_image',
                 ]
                 settings.SOCIAL_AUTH_AZUREAD_OAUTH2_RESOURCE = 'https://graph.microsoft.com/'
