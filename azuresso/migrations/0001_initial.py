@@ -32,6 +32,10 @@ def create_provider_record(apps, schema_editor):
 
 class Migration(migrations.Migration):
 
+    dependencies = [
+        ('third_party_auth', '0022_auto_20181012_0307'),
+    ]
+
     operations = [
         migrations.RunPython(create_provider_record, reverse_code=migrations.RunPython.noop),
     ]
