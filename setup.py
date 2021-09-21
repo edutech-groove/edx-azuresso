@@ -62,8 +62,7 @@ setup(
     name='azuresso',
     version=VERSION,
     description='azuresso',
-    author='eduNEXT',
-    author_email='contact@edunext.co',
+    author='GrooveTechnology',
     packages=[
         'azuresso',
     ],

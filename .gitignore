@@ -1,0 +1,8 @@
+*.egg-info/
+*.log
+*.pyc
+*.sw[op]
+.tox/
+sdk/
+venv/
+dist/
